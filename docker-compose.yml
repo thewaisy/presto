@@ -1,0 +1,20 @@
+version: '3.9'
+networks:
+  data:
+    external:
+      name: waisy
+
+services:
+  presto:
+    container_name: presto
+    hostname: presto
+    image: waisy/presto:0.261-v1
+    ports:
+      - "8080:8080"
+    networks:
+      - data
+    volumes:
+      - ./config/:/etc/presto
+    restart: always
+    environment:
+      TZ: Asia/Seoul
