@@ -1,0 +1,48 @@
+[
+    {
+        "classification": "spark",
+        "properties": {
+            "maximizeResourceAllocation": "true"
+        }
+    },
+    {
+        "classification": "presto-connector-hive",
+        "properties": {
+            "hive.allow-drop-table": "true",
+            "hive.parquet.use-column-names": "true",
+            "hive.compression-codec": "SNAPPY",
+            "hive.storage-format": "Parquet"
+        }
+    },
+    {
+        "classification": "presto-config",
+        "properties": {
+            "node-scheduler.max-splits-per-node": "500",
+            "task.max-worker-threads": "8",
+            "task.concurrency": "4",
+            "resources.reserved-system-memory": "10174MB",
+            "task.http-response-threads": "5000",
+            "query.remote-task.min-error-duration": "10m",
+            "exchange.http-client.request-timeout": "10m",
+            "query.manager-executor-pool-size": "10",
+            "query.max-memory-per-node": "6359MB",
+            "query.min-expire-age": "30m",
+            "query.execution-policy": "phased",
+            "query.max-total-memory-per-node": "10174MB",
+            "query.max-history": "10000",
+            "query.remote-task.max-callback-threads": "5000",
+            "task.http-timeout-threads": "10",
+            "memory.heap-headroom-per-node": "5087MB",
+            "query.max-concurrent-queries": "100",
+            "sql.forced-session-time-zone": "Asia/Seoul",
+            "query.client.timeout": "10m",
+            "query.max-memory": "101740MB"
+        }
+    },
+    {
+        "classification": "emrfs-site",
+        "properties": {
+            "fs.s3.maxConnections": "50000"
+        }
+    }
+]

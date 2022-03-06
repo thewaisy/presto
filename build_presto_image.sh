@@ -9,7 +9,6 @@ set -e
 
 # presto
 docker build 
-    -f ./Dockerfile \
     -t ${DOCKER_USER}/presto:${PRESTO_VERSION}-${VERSION} \
     --build-arg PRESTO_VERSION=$PRESTO_VERSION \
      .
